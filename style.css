@@ -1,0 +1,168 @@
+/* Reset styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333; /* Changed text color to improve contrast */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative; /* Needed for blur background */
+    z-index: 1;
+}
+
+/* Blur Background */
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Styling untuk gambar */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
+    animation: fadeIn 2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Love Button styling */
+.love {
+    cursor: pointer;
+    font-size: 3rem;
+    margin-top: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.love:hover {
+    transform: scale(1.2);
+    color: #ff6347;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animasi surat */
+.letter {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: showLetter 1s ease-in-out forwards;
+}
+
+.letter-content {
+    text-align: center;
+    color: #333; /* Changed text color for readability */
+}
+
+/* Animation for the letter appearance */
+@keyframes showLetter {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Button styling */
+.buttons button, .buttons a {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure buttons and links have the same styling */
+}
+
+.yes {
+    background-color: #4CAF50;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.5);
+}
+
+.yes:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.no {
+    background-color: #ff4d4d;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+.no:hover {
+    background-color: #ff3333;
+    transform: scale(1.1);
+}
+
+/* Animation for buttons */
+.buttons button, .buttons a {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
